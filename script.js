@@ -16,10 +16,6 @@ var lowerChars = prompt("Would you like lowercase characters in your password, Y
 
 var upperChars = prompt("Would you like uppercase characters in your password, Yes or No?");
 
-console.log(specialChars);
-console.log(numericChars);
-console.log(lowerChars);
-console.log(upperChars);
 
     
     function passwordGenerator(up, low, unique, numeral, pass){
@@ -27,18 +23,18 @@ console.log(upperChars);
         var uniqueChars = "";
         var numberChars = "";
         var lowCase = "";
-        const yes = "yes";
+        
 
-        if(up == yes){
+        if(up.toLowerCase() == "yes"){
             upCase += "abcdefghijklmnopqrstuvwxyz";
         }
-        if(unique == yes){
+        if(unique.toLowerCase() == "yes"){
             uniqueChars += "/!\'#\'$%&'()*+,-./:;<=>?@[\']\'^_`{|}~";
         }
-        if(numeral == yes){
+        if(numeral.toLowerCase() == "yes"){
             numberChars += "0123456789"; 
         }
-        if(low == yes){
+        if(low.toLowerCase() == "yes"){
             lowCase += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
         

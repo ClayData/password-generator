@@ -1,12 +1,12 @@
-
 var passLength = prompt("Choose a password length between 8 - 128 characters");
     if (passLength >= 8 & passLength <= 128){
     }
     else{
-        alert("Must be between 8 - 128 characters, reload page")
+        alert("Must be between 8 - 128 characters, reload page");
+        
     }
 
- var numPass = parseInt(passLength);   
+var numPass = parseInt(passLength);   
 
 var specialChars = prompt("Would you like special characters in your password, Yes or No?");
     
@@ -16,9 +16,8 @@ var lowerChars = prompt("Would you like lowercase characters in your password, Y
 
 var upperChars = prompt("Would you like uppercase characters in your password, Yes or No?");
 
-
-    
-    function passwordGenerator(){
+        
+        function passwordGenerator(){
         var upCase = "";
         var uniqueChars = "";
         var numberChars = "";
@@ -48,6 +47,16 @@ var upperChars = prompt("Would you like uppercase characters in your password, Y
     }
 
 
+    function copyToClipboard(){
+        document.getElementById("display").select();
+        document.execCommand("Copy");
+        alert("Password copied to clipboard");
+    }
+
+   
+
+
+    
 
 
 

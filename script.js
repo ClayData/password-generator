@@ -18,38 +18,37 @@ var upperChars = prompt("Would you like uppercase characters in your password, Y
 
 
     
-    function passwordGenerator(up, low, unique, numeral, pass){
+    function passwordGenerator(){
         var upCase = "";
         var uniqueChars = "";
         var numberChars = "";
         var lowCase = "";
-        
 
-        if(up.toLowerCase() == "yes"){
+        if(upperChars.toLowerCase() == "yes"){
             upCase += "abcdefghijklmnopqrstuvwxyz";
         }
-        if(unique.toLowerCase() == "yes"){
+        if(specialChars.toLowerCase() == "yes"){
             uniqueChars += "/!\'#\'$%&'()*+,-./:;<=>?@[\']\'^_`{|}~";
         }
-        if(numeral.toLowerCase() == "yes"){
+        if(numericChars.toLowerCase() == "yes"){
             numberChars += "0123456789"; 
         }
-        if(low.toLowerCase() == "yes"){
+        if(lowerChars.toLowerCase() == "yes"){
             lowCase += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
         
         var pasVal = "";
         charSet = (upCase + lowCase + numberChars + uniqueChars)
         
-        for(var i = 0, n = charSet.length; i < pass; i++){
+        for(var i = 0, n = charSet.length; i < numPass; i++){
            pasVal += charSet.charAt(Math.floor(Math.random() * n));
            
         } 
-        alert(pasVal);
+         document.getElementById("display").value = pasVal;
     }
 
 
-passwordGenerator(upperChars, lowerChars, specialChars, numericChars, numPass);
+
 
 
 

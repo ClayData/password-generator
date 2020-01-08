@@ -1,10 +1,8 @@
 
 
 var passLength = prompt("Choose a password length between 8 - 128 characters");
-    if (passLength >= 8 & passLength <= 128){
-    }
-    else{
-        alert("Error! Must be between 8 - 128 characters");
+    if (passLength < 8 | passLength > 128){
+           alert("Error! Must be between 8 - 128 characters");
         document.location.reload(true);
     }
 
